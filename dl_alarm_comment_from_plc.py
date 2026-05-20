@@ -16,9 +16,8 @@ from tkinter import messagebox
 import configparser
 import time
 
-os.chdir(os.path.dirname(__file__)) # ワーキングディレクトリ変更(VSCode時必要)
-sys.path.append(os.pardir)          # 独自モジュールPATH追加        
-import common.kv_com as kv
+# 共通モジュールインポート    
+import common_lib_mw.kv_com as kv
 
 # 関数定義 --------------------------------------------------------------
 

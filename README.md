@@ -1,9 +1,28 @@
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-　新工場見える化 Read Me ファイル
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+## 実行方法
+フォルダ内の"run.bat"をダブルクリックする。
+以下の2つのプログラムが並行して実行される。
+- disp_realtime_gsp.py
+- user_request_monitoring.py
 
-【更新履歴】
 
+## 準備
+共通モジュール"common_lib_mw"を以下のコマンドでインストールする  
+```
+git clone https://github.com/BUMZOH/common_lib_mw.git
+```
+"common_lib_mw"フォルダの中に".git"フォルダが作成されるが、不要なので削除すること。
+
+上記フォルダ"common_lib_mw"の中に以下のSpreadSheet、GoogleDriveの認証用jsonファイル、
+yamlファイルを格納すること。
+認証用のファイルは別途保管してある。
+- bumzoh.json
+- client_secrets.json
+- mtwa.kogyo.json
+- saved_credentials.json
+- settings.yaml
+
+
+## 【更新履歴】
 2025.10.12
     disp_monthly_opdata.pyでSpreadSheet貼り付け用変数data_pasteが
     グローバル変数であり、毎回空リストを入れていなかったため、データが
@@ -73,7 +92,7 @@
 
 
 
-【残作業・アップデート予定】
+## 残作業・アップデート予定
 ・disp_detail_opdata.pyの改良
 　→ データエリアと表示エリアを分ける
 　→ 時系列グラフを作成し、GoogleDriveにアップロードする

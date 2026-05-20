@@ -13,11 +13,10 @@ from tkinter import messagebox
 import keyboard
 import logging
 
-os.chdir(os.path.dirname(__file__)) # ワーキングディレクトリ変更(VSCode時必要)
 # 独自モジュールPATH追加 
-sys.path.append(os.pardir)
-import common.kv_com as kv
-import common.gspread_com as gs
+import common_lib_mw.kv_com as kv
+import common_lib_mw.gspread_com as gs
+
 
 # ロギング設定
 logging.basicConfig(filename='log(disp_realtime_gsp).txt',encoding='UTF-8',

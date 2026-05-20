@@ -7,10 +7,8 @@ import sys
 from datetime import datetime, timedelta
 import pprint as p
 
-os.chdir(os.path.dirname(__file__)) # ワーキングディレクトリ変更(VSCode時必要)
-sys.path.append(os.pardir)          # 独自モジュールPATH追加        
-import common.gspread_com as gs
-
+# 共通モジュールインポート
+import common_lib_mw.gspread_com as gs
 
 
 # --- Definition of Constant --------------------------------------------------

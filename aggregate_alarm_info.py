@@ -9,8 +9,9 @@ import sys
 import csv
 import xlwings as xw
 from datetime import datetime, timedelta
-sys.path.append(os.pardir)          # 独自モジュールPATH追加        
-import common.opdata_generator as opg
+
+# 共通モジュールインポート
+import common_lib_mw.opdata_generator as opg
 
 
 # ----- Definition of Constant -----------------------------------------------------------

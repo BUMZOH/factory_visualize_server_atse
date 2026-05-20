@@ -8,11 +8,14 @@ import sys
 import pprint as pp
 from datetime import datetime, timedelta
 
-os.chdir(os.path.dirname(__file__)) # ワーキングディレクトリ変更(VSCode時必要)
-sys.path.append(os.pardir)          # 独自モジュールPATH追加        
-import common.opdata_generator as opg   # commonフォルダ内モジュール
-import common.gspread_com as gs         # commonフォルダ内モジュール
-import get_ng_info as ng    # 同一フォルダ内モジュール
+# 同一フォルダ内モジュール
+import get_ng_info as ng    
+
+# 共通モジュールインポート
+import common_lib_mw.opdata_generator as opg
+import common_lib_mw.gspread_com as gs
+
+
 
 # Constant ---------------------------------------------------------------------------
 ITEM_NUM = 21   # TMPデータ数(日ごとに生成されるデータ数)

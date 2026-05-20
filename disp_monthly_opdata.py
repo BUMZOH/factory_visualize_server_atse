@@ -12,6 +12,9 @@ import time
 import pprint
 import calendar
 
+# 独自モジュールのインポート
+import common_lib_mw.gspread_com as gs
+
 
 # 関数定義 ------------------------------------------------------------------------
 def preparation_mcop_data(mc_name, cfg)->list:
@@ -123,11 +126,6 @@ cfg = None  # setting.ini操作用オブジェクト
 
 # メインプロセス -------------------------------------------------------------------
 def main_proc(): 
-    # ワーキングディレクトリ変更(VSCode使用時必要)
-    os.chdir(os.path.dirname(__file__))
-    sys.path.append(os.pardir)          # 独自モジュールPATH追加        
-    import common.gspread_com as gs
-
     # 接続対象設備名の取得(INIファイルより)
     cfg = configparser.ConfigParser()
     cfg.read('setting.ini')

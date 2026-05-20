@@ -17,9 +17,11 @@ import disp_tpm_monthly
 import disp_monthly_opdata
 
 # 独自モジュールPATH追加 
-sys.path.append(os.pardir)
-import common.gspread_com as gs
-import common.launch as launch
+# sys.path.append(os.pardir)
+# import common.gspread_com as gs
+# import common.launch as launch
+import common_lib_mw.gspread_com as gs
+import common_lib_mw.launch as launch
 
 
 # 定数定義 ------------------------------------------------------------------------

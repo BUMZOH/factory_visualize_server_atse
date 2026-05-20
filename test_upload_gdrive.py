@@ -1,10 +1,9 @@
 import os
 import sys
 
-os.chdir(os.path.dirname(__file__)) # ワーキングディレクトリ変更(VSCode時必要)
-# 独自モジュールPATH追加 
-sys.path.append(os.pardir)
-import common.gdrive_com as gd
+
+# 共通モジュール
+import common_lib_mw.gdrive_com as gd
 
 
 fpath = "C:/my_data/img_opdata.png"
