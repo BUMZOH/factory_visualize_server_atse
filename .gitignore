@@ -11,5 +11,8 @@ __pycache__/
 # 環境変数
 .env
 
+# ログファイル
+log*.txt
+
 # SQLite
 *.db
