@@ -150,10 +150,15 @@ if spreadsheet==None: exit()
 # メインループ --------------------
 print('-----Starting main-loop process -----')
 while True:
-    # 稼働データ取得
-    for data in op_table:
-        data = get_op_data(data, cfg)
-    print(op_table)
+    try:
+        # 稼働データ取得
+        for data in op_table:
+            data = get_op_data(data, cfg)
+        print(op_table)
+    except Exception as e:
+        logging.error(e)
+        time.sleep(1)
+        continue
 
 
     # APIリクエスト数対策として1つの表にまとめる
